@@ -51,7 +51,7 @@ class User(AbstractBaseUser):
     email = models.EmailField(max_length=100, unique=True)
     address = models.TextField(max_length=500, null=True, blank=True)
     phone = models.IntegerField(null=True, blank=True)
-    profileImage = CloudinaryField('profile_image')
+    profileImage = CloudinaryField('image')
     user_category = models.ForeignKey(
         UserCategory, on_delete=models.CASCADE, blank=True, null=True)
     registered_on = models.DateTimeField(auto_now_add=True)
